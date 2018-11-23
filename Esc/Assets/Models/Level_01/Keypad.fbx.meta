@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 085c43c4b95d35e46bf87ef344fa3597
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Camera
+    100002: //RootNode
+    100004: Keypad_Button_#
+    100006: Keypad_Button_*
+    100008: Keypad_Button_0
+    100010: Keypad_Button_1
+    100012: Keypad_Button_2
+    100014: Keypad_Button_3
+    100016: Keypad_Button_4
+    100018: Keypad_Button_5
+    100020: Keypad_Button_6
+    100022: Keypad_Button_7
+    100024: Keypad_Button_8
+    100026: Keypad_Button_9
+    100028: Keypad_Housing
+    100030: Keypad_Screen
+    100032: Lamp
+    400000: Camera
+    400002: //RootNode
+    400004: Keypad_Button_#
+    400006: Keypad_Button_*
+    400008: Keypad_Button_0
+    400010: Keypad_Button_1
+    400012: Keypad_Button_2
+    400014: Keypad_Button_3
+    400016: Keypad_Button_4
+    400018: Keypad_Button_5
+    400020: Keypad_Button_6
+    400022: Keypad_Button_7
+    400024: Keypad_Button_8
+    400026: Keypad_Button_9
+    400028: Keypad_Housing
+    400030: Keypad_Screen
+    400032: Lamp
+    2000000: Camera
+    2100000: Material
+    2100002: Material.001
+    2300000: Keypad_Button_#
+    2300002: Keypad_Button_*
+    2300004: Keypad_Button_0
+    2300006: Keypad_Button_1
+    2300008: Keypad_Button_2
+    2300010: Keypad_Button_3
+    2300012: Keypad_Button_4
+    2300014: Keypad_Button_5
+    2300016: Keypad_Button_6
+    2300018: Keypad_Button_7
+    2300020: Keypad_Button_8
+    2300022: Keypad_Button_9
+    2300024: Keypad_Housing
+    2300026: Keypad_Screen
+    3300000: Keypad_Button_#
+    3300002: Keypad_Button_*
+    3300004: Keypad_Button_0
+    3300006: Keypad_Button_1
+    3300008: Keypad_Button_2
+    3300010: Keypad_Button_3
+    3300012: Keypad_Button_4
+    3300014: Keypad_Button_5
+    3300016: Keypad_Button_6
+    3300018: Keypad_Button_7
+    3300020: Keypad_Button_8
+    3300022: Keypad_Button_9
+    3300024: Keypad_Housing
+    3300026: Keypad_Screen
+    4300000: Keypad_Button_0
+    4300002: Keypad_Button_*
+    4300004: Keypad_Button_#
+    4300006: Keypad_Button_9
+    4300008: Keypad_Button_7
+    4300010: Keypad_Button_8
+    4300012: Keypad_Button_5
+    4300014: Keypad_Button_4
+    4300016: Keypad_Button_6
+    4300018: Keypad_Button_3
+    4300020: Keypad_Button_1
+    4300022: Keypad_Button_2
+    4300024: Keypad_Screen
+    4300026: Keypad_Housing
+    10800000: Lamp
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
