@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class Keypad_Button_Press : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+    public string keypadCode;
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void OnMouseDown()
+    {
+		if (Input.GetButtonDown("Fire1"))
+        {
+            Keypad_System KeypadSystem = FindObjectOfType<Keypad_System>();
+            KeypadSystem.keyinputed(keypadCode);
+        }
+    }
+
 }

@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Keypad_System : MonoBehaviour {
 
-    public int maxNumbers = 0;
+    public int maxNumbers = 4;
+    public string password = "";
+    private string input = "";
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public void keyinputed(string keypressed)
+    {
+        input += keypressed;
+
+        DoorScript DoorOpen = FindObjectOfType<DoorScript>();
+        DoorOpen.OpenDoor();
+       
+    }
+
 }

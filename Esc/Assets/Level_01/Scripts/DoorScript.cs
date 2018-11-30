@@ -5,25 +5,24 @@ using UnityEngine;
 public class DoorScript : MonoBehaviour {
 
     public bool opendoor = false;
-
     private Animator _animator = null;
 
     void Start()
     {
         _animator = GetComponent<Animator>();
-
-        
+        _animator.enabled = false;
     }
     private void Update()
     {
         if (opendoor)
         {
-            OnTriggerEnter();
+            OpenDoor();
         }
     }
 
-    private void OnTriggerEnter()
+    public void OpenDoor()
     {
+        _animator.enabled = true;
         _animator.SetBool("isopen", true);
     }
 
