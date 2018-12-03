@@ -12,8 +12,13 @@ public class Keypad_System : MonoBehaviour {
     {
         input += keypressed;
 
-        DoorScript DoorOpen = FindObjectOfType<DoorScript>();
-        DoorOpen.OpenDoor();
+        if (input == password)
+        {
+            DoorScript DoorOpen = FindObjectOfType<DoorScript>();
+            DoorOpen.OpenDoor();
+            Debug.Log("Password Entered Correctly");
+        }
+        Debug.Log(input);
        
     }
 
