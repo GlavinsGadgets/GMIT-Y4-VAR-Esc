@@ -29,7 +29,7 @@ public class DoorScript : MonoBehaviour {
     {
         //_animator.enabled = true;
         _animator.SetBool("isopen", true);
-        Debug.Log("Called");
+
     }
 
     // Function to close the door
