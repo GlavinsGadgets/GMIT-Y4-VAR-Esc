@@ -4,22 +4,53 @@ using UnityEngine;
 
 public class Keypad_System : MonoBehaviour {
 
+    // Declares Variables
     public int maxNumbers = 4;
     public string password = "";
-    private string input = "";
+    public string input = "";
 
-    public void keyinputed(string keypressed)
+    // Waits for input from Keypad_Button_Press Script
+    public void keyinputed(string keyedNum)
     {
-        input += keypressed;
+        // Adds keyedNum onto input string
+        input += keyedNum;
 
-        if (input == password)
+        // Finds other script objects
+        Change_Keypad_Text ChangeText = FindObjectOfType<Change_Keypad_Text>();
+        DoorScript DoorOpen = FindObjectOfType<DoorScript>();
+
+        // Checks if the length of the number inputed is less than maxNumbers
+        if (input.Length <= maxNumbers)
         {
-            DoorScript DoorOpen = FindObjectOfType<DoorScript>();
-            DoorOpen.OpenDoor();
-            Debug.Log("Password Entered Correctly");
+            // Sends text to the TextMeshPro text
+            ChangeText.ChangeText(keyedNum);
+
+            // Checks if the inputed string is equal to the password
+            if (input == password)
+            {
+                DoorOpen.OpenDoor();
+            }
         }
-        Debug.Log(input);
-       
+        // Checks if the inputed value is longer than maxNumbers calls InputError function if it is and resets input
+        else if (input.Length > maxNumbers)
+        {
+            input = "";
+            ChangeText.InputError();
+        }
+
+    }
+    // Called when the user presses on the screen part of the keypad
+    public void InputReset()
+    {
+        // Finds script to change the textmeshpro object
+        Change_Keypad_Text ChangeText = FindObjectOfType<Change_Keypad_Text>();
+        DoorScript DoorOpen = FindObjectOfType<DoorScript>();
+
+        //Resets the input to default parameters
+        input = "";
+        ChangeText.ResetText();
+        DoorOpen.CloseDoor();
+
     }
 
 }

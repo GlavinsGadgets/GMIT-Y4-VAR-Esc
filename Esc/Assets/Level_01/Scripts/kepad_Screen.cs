@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class kepad_screen : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // On mouse down the inputed code will be reset
+    void OnMouseDown()
+    {
+        // Finds the Keypad Manager System script
+        Keypad_System KeypadSystem = FindObjectOfType<Keypad_System>();
+
+        if (Input.GetButtonDown("Fire1"))
+        {
+            KeypadSystem.InputReset();
+        }
+    }
 }
