@@ -256,10 +256,10 @@
     <None Include="Assets\Imported Assets\GoogleVR\Plugins\Android\proguard-gvr.txt" />
     <None Include="Assets\Imported Assets\GoogleVR\Plugins\Android\AndroidManifest-Cardboard.xml" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>D:/College/VirtualAugmentedReality/GMIT-Y4-VAR-Esc/Esc/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Eanna/College/Virtual Augmented Reality/Project/Esc/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/College/VirtualAugmentedReality/GMIT-Y4-VAR-Esc/Esc/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Eanna/College/Virtual Augmented Reality/Project/Esc/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -451,13 +451,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Google.ProtocolBuffers">
-      <HintPath>D:/College/VirtualAugmentedReality/GMIT-Y4-VAR-Esc/Esc/Assets/Imported Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
+      <HintPath>C:/Users/Eanna/College/Virtual Augmented Reality/Project/Esc/Assets/Imported Assets/GoogleVR/Plugins/Google.ProtocolBuffers.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Editor">
-      <HintPath>D:/College/VirtualAugmentedReality/GMIT-Y4-VAR-Esc/Esc/Assets/Imported Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
+      <HintPath>C:/Users/Eanna/College/Virtual Augmented Reality/Project/Esc/Assets/Imported Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Editor.dll</HintPath>
     </Reference>
     <Reference Include="TextMeshPro-2017.3-Runtime">
-      <HintPath>D:/College/VirtualAugmentedReality/GMIT-Y4-VAR-Esc/Esc/Assets/Imported Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
+      <HintPath>C:/Users/Eanna/College/Virtual Augmented Reality/Project/Esc/Assets/Imported Assets/TextMesh Pro/Plugins/Editor DLL/TextMeshPro-2017.3-Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.Analytics">
       <HintPath>C:/Users/Eanna/AppData/Local/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>
