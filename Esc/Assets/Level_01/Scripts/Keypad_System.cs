@@ -5,7 +5,6 @@ using UnityEngine;
 public class Keypad_System : MonoBehaviour {
 
     // Declares Variables
-    public int maxNumbers = 4;
     public string password = "";
     public string input = "";
 
@@ -16,11 +15,11 @@ public class Keypad_System : MonoBehaviour {
         input += keyedNum;
 
         // Finds other script objects
-        Change_Keypad_Text ChangeText = FindObjectOfType<Change_Keypad_Text>();
-        DoorScript DoorOpen = FindObjectOfType<DoorScript>();
+        Keypad_Change_Screen ChangeText = FindObjectOfType<Keypad_Change_Screen>();
+        DoorControl DoorOpen = FindObjectOfType<DoorControl>();
 
         // Checks if the length of the number inputed is less than maxNumbers
-        if (input.Length <= maxNumbers)
+        if (input.Length <= password.Length)
         {
             // Sends text to the TextMeshPro text
             ChangeText.ChangeText(keyedNum);
@@ -30,9 +29,15 @@ public class Keypad_System : MonoBehaviour {
             {
                 DoorOpen.OpenDoor();
             }
+            // else if the password is not the correct password and the length of the password
+            else if (input != password && input.Length == password.Length)
+            {
+                input = "";
+                ChangeText.InputError();
+            }
         }
         // Checks if the inputed value is longer than maxNumbers calls InputError function if it is and resets input
-        else if (input.Length > maxNumbers)
+        else if (input.Length > password.Length)
         {
             input = "";
             ChangeText.InputError();
@@ -43,8 +48,8 @@ public class Keypad_System : MonoBehaviour {
     public void InputReset()
     {
         // Finds script to change the textmeshpro object
-        Change_Keypad_Text ChangeText = FindObjectOfType<Change_Keypad_Text>();
-        DoorScript DoorOpen = FindObjectOfType<DoorScript>();
+        Keypad_Change_Screen ChangeText = FindObjectOfType<Keypad_Change_Screen>();
+        DoorControl DoorOpen = FindObjectOfType<DoorControl>();
 
         //Resets the input to default parameters
         input = "";

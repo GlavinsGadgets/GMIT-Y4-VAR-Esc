@@ -483,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 802158745}
   - component: {fileID: 802158746}
+  - component: {fileID: 802158747}
   m_Layer: 0
   m_Name: Area Light
   m_TagString: Untagged
@@ -496,13 +497,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 802158744}
-  m_LocalRotation: {x: 0.3903095, y: 0.3903095, z: 0.5896258, w: 0.5896258}
-  m_LocalPosition: {x: -0.039499998, y: 0, z: -0.019500002}
+  m_LocalRotation: {x: 0.41394794, y: 0.41394794, z: 0.5732775, w: 0.5732775}
+  m_LocalPosition: {x: -0.039499998, y: 0, z: -0.01521}
   m_LocalScale: {x: 0.010000002, y: 0.010000002, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1420814887}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 157.006, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 180, y: -108.336, z: -90}
 --- !u!108 &802158746
 Light:
   m_ObjectHideFlags: 0
@@ -539,6 +540,19 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &802158747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 802158744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85b525d236692c64bac9a03f1ebd0123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minWaitTime: 0.1
+  maxWaitTime: 2
 --- !u!1 &921960039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1354,8 +1368,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.1416, y: 2.156}
-  m_SizeDelta: {x: 25.88, y: 4.389}
+  m_AnchoredPosition: {x: -4.129, y: 2.04}
+  m_SizeDelta: {x: 21.5826, y: 5.4178}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842148304
 MonoBehaviour:
@@ -1376,7 +1390,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: Are you ready to Escape?
+  m_text: CAN YOU ESCAPE?
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d62a573c923f5cb47b8ff65261033b90, type: 2}
   m_sharedMaterial: {fileID: 2164040, guid: d62a573c923f5cb47b8ff65261033b90, type: 2}
@@ -1403,7 +1417,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 24.2
+  m_fontSize: 18.4
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1441,15 +1455,15 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: -3.7136123, z: 0, w: -4.6851873}
+  m_margin: {x: 0, y: 0.017939612, z: 0, w: 0.009584945}
   m_textInfo:
     textComponent: {fileID: 1842148304}
-    characterCount: 24
+    characterCount: 15
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 5
+    spaceCount: 2
+    wordCount: 3
     linkCount: 0
-    lineCount: 4
+    lineCount: 2
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0
