@@ -5,11 +5,13 @@ using UnityEngine;
 public class LightFlash : MonoBehaviour {
 
     Light pointLight;
+    AudioSource audioData;
     public float minWaitTime = 0.1f;
     public float maxWaitTime = 1f;
 
     void Start () {
         pointLight = GetComponent<Light>();
+        audioData = GetComponent<AudioSource>();
         StartCoroutine(Flashing());
 	}
 
@@ -20,6 +22,7 @@ public class LightFlash : MonoBehaviour {
             // Randomly flashes the light on and off depending on the min and max wait times.
             yield return new WaitForSeconds(Random.Range(minWaitTime, maxWaitTime));
             pointLight.enabled = ! pointLight.enabled;
+            audioData.Play(0);
         }
     }
 
