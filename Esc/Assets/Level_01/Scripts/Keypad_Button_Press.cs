@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Keypad_Button_Press : MonoBehaviour {
     
+    /*
+        Script used when user presses on the keypad, to send data to the Keypad_System.cs file.
+    */
+
     // Declares Variables
     public string keyedNum;
     private float ButtonBottomOut;

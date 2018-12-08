@@ -4,32 +4,38 @@ using UnityEngine;
 
 public class Keypad_System : MonoBehaviour {
 
-    // Declares Variables
+    /*
+        Keypad System which waits for an input from the Keypad_Button_Press.cs script and the Keypad_Reset.cs script.
+    */
+
+    // Inits vars
     public string password = "";
     public string input = "";
+    AudioSource DoorOpen;
+    AudioSource DoorClose;
 
     // Waits for input from Keypad_Button_Press Script
     public void keyinputed(string keyedNum)
     {
-        // Adds keyedNum onto input string
         input += keyedNum;
 
-        // Finds other script objects
         Keypad_Change_Screen ChangeText = FindObjectOfType<Keypad_Change_Screen>();
         DoorControl DoorOpen = FindObjectOfType<DoorControl>();
-
+        Move_Player Move = FindObjectOfType<Move_Player>();
+        
         // Checks if the length of the number inputed is less than maxNumbers
         if (input.Length <= password.Length)
         {
-            // Sends text to the TextMeshPro text
+            // Sends text to the TextMeshPro text element on the keypad
             ChangeText.ChangeText(keyedNum);
 
-            // Checks if the inputed string is equal to the password
+            // Checks if the inputed string is equal to the password which then opens the door and moves the player
             if (input == password)
             {
                 DoorOpen.OpenDoor();
+                Move.DoorOpened = true;
             }
-            // else if the password is not the correct password and the length of the password
+            // else if the password is not the correct password and the length of the password is equal to the length of the password
             else if (input != password && input.Length == password.Length)
             {
                 input = "";
@@ -44,6 +50,7 @@ public class Keypad_System : MonoBehaviour {
         }
 
     }
+
     // Called when the user presses on the screen part of the keypad
     public void InputReset()
     {
@@ -51,10 +58,14 @@ public class Keypad_System : MonoBehaviour {
         Keypad_Change_Screen ChangeText = FindObjectOfType<Keypad_Change_Screen>();
         DoorControl DoorOpen = FindObjectOfType<DoorControl>();
 
-        //Resets the input to default parameters
+        //Resets the input to default parameters and closes the door if its open.
         input = "";
         ChangeText.ResetText();
-        DoorOpen.CloseDoor();
+
+        if (DoorOpen.opendoor == true)
+        { 
+            DoorOpen.CloseDoor(); // Used for play testing
+        }
 
     }
 

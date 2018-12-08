@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MenuOptions : MonoBehaviour {
 
+    /*
+        Main menu screen options. 
+    */
+
     // Select which button the script had been choosen to be placed on
     public bool PlayButton;
     public bool QuitButton;

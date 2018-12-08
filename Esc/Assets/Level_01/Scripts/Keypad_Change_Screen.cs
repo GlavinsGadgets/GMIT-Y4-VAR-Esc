@@ -5,15 +5,19 @@ using TMPro;
 
 public class Keypad_Change_Screen : MonoBehaviour {
 
-    // Initalizes vars
+    /*
+        Script which changes the text on the screen.
+    */
+
+    // Inits vars
     private TextMeshPro textmesh;
     private int maxNumbers;
     private string input = "";
 
     // Gets game components
-    void Start()
+    private void Start()
     {
-        textmesh = GetComponent<TextMeshPro> ();
+        textmesh = GetComponent<TextMeshPro>();
         Keypad_System KeySys = FindObjectOfType<Keypad_System>();
         maxNumbers = KeySys.password.Length;
     }
@@ -35,16 +39,17 @@ public class Keypad_Change_Screen : MonoBehaviour {
     // Changes output on the screen when an Input Error is encounted
     public void InputError()
     {
+        input = "";
         // Calls the WaitInputError function and sends text within the function
         StartCoroutine(WaitInputError("Err"));
     }
-    // IEnumerator used for the WaitForSeconds function
     IEnumerator WaitInputError(string text)
+        // IEnumerator used for the WaitForSeconds function
     {
         // Sets the text on the screen to the text inputed from the function call
         textmesh.text = text;
         // Text waits for 1 second
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1.2f);
         // Calls the Reset function
         ResetText();
     }

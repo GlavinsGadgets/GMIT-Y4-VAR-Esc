@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class LightFlash : MonoBehaviour {
 
+    /*
+        Script used to make the light flash in game. 
+    */
+
     Light pointLight;
     AudioSource audioData;
     public float minWaitTime = 0.1f;

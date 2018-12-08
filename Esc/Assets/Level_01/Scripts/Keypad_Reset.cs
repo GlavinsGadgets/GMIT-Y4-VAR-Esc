@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Keypad_Reset : MonoBehaviour {
 
+    /*
+        Script which calls the reset function on the Keypad_System.cs script.
+    */
+
     // On mouse down the inputed code will be reset
-    void OnMouseDown()
+    private void OnMouseDown()
     {
-        // Finds the Keypad Manager System script
         Keypad_System KeypadSystem = FindObjectOfType<Keypad_System>();
 
         if (Input.GetButtonDown("Fire1"))
         {
-            // Calls the InputReset function if you click on the screen
             KeypadSystem.InputReset();
         }
     }

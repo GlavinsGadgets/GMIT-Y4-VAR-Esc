@@ -4,17 +4,18 @@ using UnityEngine;
 
 public class DoorControl : MonoBehaviour {
 
-    // Inits vars
-    public bool opendoor = false;
-    private Animator _animator = null;
+    /*
+        Door to open the door if the opendoor bool has been set to true.
+    */
 
-    // Calls the _animator component and makes sure it is disabled from the begining 
-    void Start()
+    // Inits vars
+    private Animator _animator = null;
+    public bool opendoor = false;
+
+    private void Start()
     {
         _animator = GetComponent<Animator>();
-       // _animator.enabled = false;
     }
-    // Checks to see if the opendoor boolean had been changed
     private void Update()
     {
         // Checks to see if the opendoor is enabled then it will call the OpenDoor function
@@ -22,20 +23,24 @@ public class DoorControl : MonoBehaviour {
         {
             OpenDoor();
         }
+        Move_Player Move = FindObjectOfType<Move_Player>();
+        if (Move.PlayerReachedPoint == true)
+        {
+            opendoor = false;
+            CloseDoor();
+        }
     }
 
-    // Function to open the door
     public void OpenDoor()
     {
-        //_animator.enabled = true;
+        Door_Open_Sound OpenCall = FindObjectOfType<Door_Open_Sound>();
         _animator.SetBool("isopen", true);
-
+        OpenCall.PlayOpenSound();
     }
-
-    // Function to close the door
     public void CloseDoor()
     {
+        Door_Close_Sound CloseCall = FindObjectOfType<Door_Close_Sound>();
         _animator.SetBool("isopen", false);
-       // _animator.enabled = false;
+        CloseCall.PlayCloseSound();
     }
 }
