@@ -11,8 +11,6 @@ public class Keypad_System : MonoBehaviour {
     // Inits vars
     public string password = "";
     public string input = "";
-    AudioSource DoorOpen;
-    AudioSource DoorClose;
 
     // Waits for input from Keypad_Button_Press Script
     public void keyinputed(string keyedNum)

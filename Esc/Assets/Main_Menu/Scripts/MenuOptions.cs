@@ -12,6 +12,7 @@ public class MenuOptions : MonoBehaviour {
     // Select which button the script had been choosen to be placed on
     public bool PlayButton;
     public bool QuitButton;
+    public bool MainMenu;
 
     // OnMouseDown checks if the fire button has been pressed
     void OnMouseDown()
@@ -24,6 +25,11 @@ public class MenuOptions : MonoBehaviour {
         {
             QuitGame();
         }
+        if (Input.GetButtonDown("Fire1") && MainMenu)
+        {
+            BackToMainMenu();
+        }
+
     }
     void PlayGame()
     {
@@ -39,6 +45,14 @@ public class MenuOptions : MonoBehaviour {
         {
             Application.Quit();
             // Debug.Log("Quit App");
+        }
+    }
+
+    void BackToMainMenu()
+    {
+        if (MainMenu)
+        {
+            SceneManager.LoadScene(0);
         }
     }
 

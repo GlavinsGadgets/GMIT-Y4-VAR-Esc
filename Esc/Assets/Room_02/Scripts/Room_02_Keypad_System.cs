@@ -18,6 +18,7 @@ public class Room_02_Keypad_System : MonoBehaviour {
         input += keyedNum;
 
         Room_02_Keypad_Change_Screen ChangeText = FindObjectOfType<Room_02_Keypad_Change_Screen>();
+        Room_02_DoubleDoorControl DoorOpen = FindObjectOfType<Room_02_DoubleDoorControl>();
         
         // Checks if the length of the number inputed is less than maxNumbers
         if (input.Length <= password.Length)
@@ -28,6 +29,7 @@ public class Room_02_Keypad_System : MonoBehaviour {
             // Checks if the inputed string is equal to the password which then opens the door and moves the player
             if (input == password)
             {
+                DoorOpen.opendoor = true;
             }
             // else if the password is not the correct password and the length of the password is equal to the length of the password
             else if (input != password && input.Length == password.Length)
@@ -50,11 +52,16 @@ public class Room_02_Keypad_System : MonoBehaviour {
     {
         // Finds script to change the textmeshpro object
         Room_02_Keypad_Change_Screen ChangeText = FindObjectOfType<Room_02_Keypad_Change_Screen>();
+        Room_02_DoubleDoorControl DoorOpen = FindObjectOfType<Room_02_DoubleDoorControl>();
 
         //Resets the input to default parameters and closes the door if its open.
         input = "";
         ChangeText.ResetText();
 
+        if (DoorOpen.opendoor == true)
+        {
+            DoorOpen.opendoor = false; // Used for play testing
+        }
     }
 
 }

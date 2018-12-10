@@ -23,12 +23,8 @@ public class Room_02_HallDoorControl : MonoBehaviour {
         {
             OpenDoor();
         }
-        else if (!opendoor)
-        {
-            CloseDoor();
-        }
-        Move_Player Move = FindObjectOfType<Move_Player>();
-        if (Move.PlayerReachedPoint == true)
+        Room_02_Move_Player Move = FindObjectOfType<Room_02_Move_Player>();
+        if (Move.PlayerReachedInsideRoom == true)
         {
             opendoor = false;
             CloseDoor();
@@ -39,12 +35,12 @@ public class Room_02_HallDoorControl : MonoBehaviour {
     {
         Door_Open_Sound OpenCall = FindObjectOfType<Door_Open_Sound>();
         _animator.SetBool("isopen", true);
-        OpenCall.PlayOpenSound();
+        OpenCall.PlaySound = true;
     }
     public void CloseDoor()
     {
-        Door_Close_Sound CloseCall = FindObjectOfType<Door_Close_Sound>();
+        //Door_Close_Sound CloseCall = FindObjectOfType<Door_Close_Sound>();
         _animator.SetBool("isopen", false);
-        CloseCall.PlayCloseSound();
+        //CloseCall.PlaySound = true;
     }
 }

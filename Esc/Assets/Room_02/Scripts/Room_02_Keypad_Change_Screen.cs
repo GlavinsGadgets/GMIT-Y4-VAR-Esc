@@ -18,7 +18,7 @@ public class Room_02_Keypad_Change_Screen : MonoBehaviour {
     private void Start()
     {
         textmesh = GetComponent<TextMeshPro>();
-        Keypad_System KeySys = FindObjectOfType<Keypad_System>();
+        Room_02_Keypad_System KeySys = FindObjectOfType<Room_02_Keypad_System>();
         maxNumbers = KeySys.password.Length;
     }
 

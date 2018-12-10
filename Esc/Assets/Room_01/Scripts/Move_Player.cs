@@ -31,9 +31,7 @@ public class Move_Player : MonoBehaviour {
         // Checks if the player has reached the point outside the room.
         if (gameObject.transform.position == OutsideRoom)
         {
-            PlayerReachedPoint = true;
-            SceneManager.LoadScene(2);
-
+            StartCoroutine(LoadWait());
         }
         else if (gameObject.transform.position != OutsideRoom)
         {
@@ -54,5 +52,12 @@ public class Move_Player : MonoBehaviour {
     public void ResetPlayer() {
         gameObject.transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 1.1f, 0), (10 * Time.deltaTime));
     }
-	
+
+    IEnumerator LoadWait()
+    {
+        yield return new WaitForSeconds(1f);
+        PlayerReachedPoint = true;
+        SceneManager.LoadScene(2);
+    }
+
 }

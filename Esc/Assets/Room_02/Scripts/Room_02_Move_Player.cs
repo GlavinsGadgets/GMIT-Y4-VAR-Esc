@@ -5,13 +5,16 @@ using UnityEngine;
 public class Room_02_Move_Player : MonoBehaviour {
 
     public bool startMovement = false;
+    public bool PlayerWon = false;
     public bool PlayerReachedInsideRoom = false;
+    public bool PlayerReachedFinalPosition = false;
     public bool Reset;
     public float stepspeed;
     private float step;
 
     private Vector3 InsideRoom = new Vector3(4f, 1.1f, 0f);
     private Vector3 CenterRoom = new Vector3(4f, 1.1f, 0.5f);
+    private Vector3 FinalPosition = new Vector3(7f, 1.1f, 0.5f);
 
     private void Start()
     {
@@ -20,26 +23,37 @@ public class Room_02_Move_Player : MonoBehaviour {
         OnLoadDoor.opendoor = true;
     }
     // Update is called once per frame
-    void Update ()
+    private void Update ()
     {
         step = stepspeed * Time.deltaTime;
+        
 
         if (startMovement)
         { 
             OnLoadMove();
         }
+        if (PlayerWon == true)
+        {
+            OnFinalScreen();
+        }
+
         if (gameObject.transform.position == InsideRoom)
         {
-            Room_02_HallDoorControl OnLoadDoor = FindObjectOfType < Room_02_HallDoorControl > ();
-
+            Room_02_HallDoorControl OnLoadDoor = FindObjectOfType<Room_02_HallDoorControl>();
             PlayerReachedInsideRoom = true;
-            startMovement = false;
             OnLoadDoor.opendoor = false;
+            startMovement = false;
+        }
+        if (gameObject.transform.position == FinalPosition)
+        {
+            Room_02_DoubleDoorControl CloseDoor = FindObjectOfType<Room_02_DoubleDoorControl>();
+            CloseDoor.CloseDoor();
         }
         if (PlayerReachedInsideRoom == true)
         {
             gameObject.transform.position = Vector3.MoveTowards(transform.position, CenterRoom, step);
         }
+        
         if (Reset)
         {
             OnLevelReset();
@@ -48,8 +62,7 @@ public class Room_02_Move_Player : MonoBehaviour {
 
     public void OnLoadMove()
     {
-        gameObject.transform.position = Vector3.MoveTowards(transform.position, InsideRoom, step);
-       
+        StartCoroutine(LoadWait());
     }
     public void OnLevelReset()
     {
@@ -58,4 +71,16 @@ public class Room_02_Move_Player : MonoBehaviour {
         Start();
     }
 
+    IEnumerator LoadWait()
+    {
+        yield return new WaitForSeconds(1f);
+        gameObject.transform.position = Vector3.MoveTowards(transform.position, InsideRoom, step);
+    }
+
+    public void OnFinalScreen()
+    {
+        PlayerReachedInsideRoom = false;
+        gameObject.transform.position = Vector3.MoveTowards(transform.position, FinalPosition, step);
+        PlayerReachedFinalPosition = true;
+    }
 }
