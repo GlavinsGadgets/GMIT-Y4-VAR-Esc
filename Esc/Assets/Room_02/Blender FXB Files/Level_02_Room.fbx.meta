@@ -18,6 +18,7 @@ ModelImporter:
     100024: Hall Wall
     100026: Shed
     100028: 'Wall Opposite Hall Door '
+    100030: Roof
     400000: //RootNode
     400002: Outside Ground
     400004: Outside Roof
@@ -33,10 +34,12 @@ ModelImporter:
     400024: Hall Wall
     400026: Shed
     400028: 'Wall Opposite Hall Door '
+    400030: Roof
     2100000: OutsideWallMaterial
     2100002: Outside_Roof_Mat
     2100004: Carpet
     2100006: No Name
+    2100008: Roof
     2300000: Outside Ground
     2300002: Outside Roof
     2300004: Outside Wall Door
@@ -49,6 +52,7 @@ ModelImporter:
     2300018: Ground.001
     2300020: Hall Wall
     2300022: 'Wall Opposite Hall Door '
+    2300024: Roof
     3300000: Outside Ground
     3300002: Outside Roof
     3300004: Outside Wall Door
@@ -61,6 +65,7 @@ ModelImporter:
     3300018: Ground.001
     3300020: Hall Wall
     3300022: 'Wall Opposite Hall Door '
+    3300024: Roof
     4300000: Outside Wall Infront of Door
     4300002: Outside Wall Opposite Door
     4300004: Outside Wall Other Door
@@ -73,6 +78,7 @@ ModelImporter:
     4300018: 'Wall Opposite Hall Door '
     4300020: Hall Wall
     4300022: Ground
+    4300024: Roof
   externalObjects: {}
   materials:
     importMaterials: 1
