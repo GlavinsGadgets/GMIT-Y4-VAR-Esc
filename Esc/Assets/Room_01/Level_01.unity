@@ -426,18 +426,18 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9481132, g: 0.9810392, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 12
+  m_Intensity: 1.3
+  m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 0.7
+    m_Strength: 0.5
     m_Bias: 0
     m_NormalBias: 0
-    m_NearPlane: 0.2
+    m_NearPlane: 0.05
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
@@ -459,7 +459,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 101536935}
   m_LocalRotation: {x: 1, y: -0, z: -0, w: 0}
-  m_LocalPosition: {x: 0, y: -0.106, z: 0}
+  m_LocalPosition: {x: 0, y: -0.122, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 221643040}
@@ -1087,9 +1087,9 @@ GameObject:
   - component: {fileID: 443779616}
   - component: {fileID: 443779618}
   - component: {fileID: 443779617}
-  - component: {fileID: 443779619}
   - component: {fileID: 443779620}
   - component: {fileID: 443779621}
+  - component: {fileID: 443779619}
   m_Layer: 0
   m_Name: Keypad_Screen
   m_TagString: Untagged
@@ -1163,7 +1163,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 443779615}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d2f6339fa7afd47899a3a0889abcb1, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f49df55622f3c447a221ef2ff949867, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &443779620
@@ -2373,7 +2373,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1038319655}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a639e35c1be767b49bf02998e37cfcbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7cd876981a4ca084fa8d682753f61398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1038319658
@@ -4958,18 +4958,18 @@ Light:
   serializedVersion: 8
   m_Type: 2
   m_Color: {r: 0.9481132, g: 0.9810392, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 5
+  m_Intensity: 1.5
+  m_Range: 2.5
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 2
     m_CustomResolution: -1
-    m_Strength: 0.7
+    m_Strength: 0.5
     m_Bias: 0
     m_NormalBias: 0
-    m_NearPlane: 0.2
+    m_NearPlane: 0.025
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
